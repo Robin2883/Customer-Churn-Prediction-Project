@@ -2,12 +2,15 @@ import pandas as pd
 import argparse
 
 from src.data.load import data_load
+from src.utils.validate import validate_data
 
 def main(args):
     print("Loading Data:")
     df= data_load(args.input)
     print(df.head())
     print("Data Loaded Succesfully")
+    print("Data Validation Started:")
+    validate_data(df)
     
 
 
