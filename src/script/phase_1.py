@@ -1,6 +1,4 @@
 import pandas as pd
-import os
-import sys
 import argparse
 
 from src.data.load import data_load
@@ -8,8 +6,9 @@ from src.data.load import data_load
 def main(args):
     print("Loading Data:")
     df= data_load(args.input)
-    print("Data Loaded Succesfully")
     print(df.head())
+    print("Data Loaded Succesfully")
+    
 
 
 if __name__=="__main__":
