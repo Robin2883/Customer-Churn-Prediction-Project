@@ -3,6 +3,8 @@ import pandas as pd
 
 
 def validate_data(df)->tuple[bool, list[str]]:
+    print("Data Validation Started:")
+    
     df=df.copy()
     df['TotalCharges']=pd.to_numeric(df['TotalCharges'], errors='coerce')
     context=gx.get_context()
