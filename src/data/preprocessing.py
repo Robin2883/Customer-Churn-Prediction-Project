@@ -26,6 +26,8 @@ def pre_process(df:pd.DataFrame, target_column:str= "Churn" ):
     num_columns= df.select_dtypes(include='number').columns
     df[num_columns]=df[num_columns].fillna(0)
 
+
+    df.to_csv(r'Data\processed\processed.csv')
     print("Pre-processing completed")
 
     return df
