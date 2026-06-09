@@ -4,6 +4,7 @@ import argparse
 from src.data.load import data_load
 from src.utils.validate import validate_data
 from src.data.preprocessing import pre_process
+from src.features.build_features import build_features
 
 def main(args):
 
@@ -14,6 +15,14 @@ def main(args):
 
     df=pre_process(df)
     print(df.head())
+
+    target = args.target
+    if target not in df.columns:
+            raise ValueError(f"Target column '{target}' not found in data")
+    
+    df_enc = build_features(df, target_col=target)
+    print(df_enc.head())
+
 
     
 
