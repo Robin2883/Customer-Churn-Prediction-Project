@@ -17,15 +17,44 @@ This project helps businesses identify high-risk customers early so they can tak
 
 customer-churn-project/
 │
-├── artifacts/ # Trained model & feature columns
-├── data/ # raw data, pre-processed data
-|
-  ├── serving/
-  │ └── inference.py # Prediction logic
-  ├── app.py # FastAPI + Gradio app
-  ├── train.py # Model training pipeline
-  ├── requirements.txt
-  └── README.md
+├── artifacts/                          
+│   ├── model.pkl                      
+│   ├── preprocessing.pkl             
+│   └── features_columns.pkl          
+│
+├── data/                              
+│   ├── raw/                         
+│   └── processed/  
+│
+├── src/                              
+│   │
+│   ├── app/                          
+│   │   └── app.py                    
+│   │
+│   ├── data/                          
+│   │   ├── load.py                 
+│   │   └── pre_processing.py     
+│   │
+│   ├── features/                   
+│   │   └── build_features.py
+│   │
+│   ├── model_training/              
+│   │   ├── train.py                
+│   │   ├── tune.py                  
+│   │   └── evaluate.py              
+│   │
+│   ├── scripts/                    
+│   │   └── run_pipeline.py
+│   │
+│   ├── serving/                      
+│   │   └── inference.py
+│   │
+│   └── utils/                       
+│       ├── logger.py
+│       └── validate.py
+│
+├── requirements.txt
+└── README.md
 
 ## ⚙️ Workflow
 
@@ -64,7 +93,7 @@ Target: Customer Churn (Yes/No)
 Input Features: Tenure, Contract, Monthly Charges, Services, etc.
 Evaluation Metrics: Accuracy, Precision, Recall, F1-score
 
-📷 Demo
+📷 Gradio UI
 
 ![Gradio](telco_churn.jpeg)
 
