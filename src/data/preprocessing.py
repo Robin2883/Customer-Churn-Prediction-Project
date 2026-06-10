@@ -16,7 +16,8 @@ def pre_process(df:pd.DataFrame, target_column:str= "Churn" ):
         df['TotalCharges']=pd.to_numeric(df['TotalCharges'], errors='coerce')
 
     #label enccoding the target column
-    df[target_column]=df[target_column].str.strip().map({"Yes": 1, "No": 0})
+    if target_column in df.columns and df[target_column].dtype == "object":
+        df[target_column] = df[target_column].str.strip().map({"No": 0, "Yes": 1})
 
     #seniorCitizen values should be 0/1 if present
     if 'SeniorCitizen' in df.columns:
