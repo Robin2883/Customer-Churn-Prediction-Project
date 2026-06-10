@@ -1,4 +1,4 @@
-fastapi                   0.136.3
+sfastapi                   0.136.3
 gradio                    6.17.3
 gradio_client             2.5.0
 great_expectations        1.18.0
