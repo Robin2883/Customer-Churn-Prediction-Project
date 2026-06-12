@@ -98,7 +98,10 @@ Evaluation Metrics: Accuracy, Precision, Recall, F1-score
 ![Gradio](telco_churn.jpeg)
 
 -  Future Improvements
+
+Integrate with MLFlow
 Deploy on AWS
+Dockerize whole project
 Store predictions in database
 Improve UI dashboard 
 
