@@ -1,11 +1,11 @@
-## 🎯 Problem Statement
+##  Problem Statement
 
 Customer churn is a major challenge for subscription-based businesses.  
 This project helps businesses identify high-risk customers early so they can take preventive actions to improve retention.
 
-## 🧠 Tech Stack
+##  Tech Stack
 
-- Python 🐍
+- Python 
 - Pandas, NumPy
 - Scikit-learn
 - XGBoost
@@ -13,7 +13,7 @@ This project helps businesses identify high-risk customers early so they can tak
 - Gradio
 - Joblib
 
-## 📁 Project Structure
+##  Project Structure
 
 customer-churn-project/
 │
@@ -56,7 +56,7 @@ customer-churn-project/
 ├── requirements.txt
 └── README.md
 
-## ⚙️ Workflow
+##  Workflow
 
 1. Data Loading, preprocessing & cleaning  
 2. Feature engineering  
@@ -68,45 +68,45 @@ customer-churn-project/
 8. Serve predictions via FastAPI  
 9. UI interaction via Gradio
 
-## ▶️ Run Locally
+## Run Locally
 
-### 1️⃣ Clone Repository
+###  Clone Repository
 
 git clone https://github.com/Robin2883/Customer-Churn-Prediction-Project.git
 cd customer-churn-project
 
-2️⃣ Install Dependencies
+-  Install Dependencies
 
 pip install -r requirements.txt
 
-3️⃣ Run Application
+-  Run Application
 
 python -m src.app.app
 
-4️⃣ Open UI
+-  Open UI
 
 http://127.0.0.1:8000/ui/
 
-📊 Model Details
+-  Model Details
 Model: XGBoost Classifier
 Target: Customer Churn (Yes/No)
 Input Features: Tenure, Contract, Monthly Charges, Services, etc.
 Evaluation Metrics: Accuracy, Precision, Recall, F1-score
 
-📷 Gradio UI
+-  Gradio UI
 
 ![Gradio](telco_churn.jpeg)
 
-🚀 Future Improvements
+-  Future Improvements
 Deploy on AWS
 Store predictions in database
 Improve UI dashboard 
 
-👨‍💻 Author
+-  Author
 
 Md Kamrul Hassan Robin
 Machine Learning Enthusiast | Data Science Developer
 
-⭐ Show Your Support
+-  Show Your Support
 
 If you like this project, give it a ⭐ on GitHub!
